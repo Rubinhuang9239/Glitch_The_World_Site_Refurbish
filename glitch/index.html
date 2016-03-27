@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>BetterFrame - fullPage.js</title>
+	<meta name="keywords"  content="fullpage,jquery,demo,callbac,function,event" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="script/p5.min.js"></script>
+	<script type="text/javascript" src="script/main.js"></script>
+	<script type="text/javascript" src="script/ui.js"></script>
+	<script type="text/javascript" src="script/animate.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#000', '#000', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE'],
+				'navigation': true,
+				menu: '#menu',
+				'navigationPosition': 'right',
+				responsive: 700,
+				//afterLoad: function(anchorLink, index){
+
+					//section 2
+					// if(index == 2){
+					// 	//moving the image
+					// 	$('#section1').find('img').delay(500).animate({
+					// 		left: '0%'
+					// 	}, 1500, 'easeOutExpo');
+
+					// 	$('#section1').find('p').first().fadeIn(1800, function(){
+					// 		$('#section1').find('p').last().fadeIn(1800);
+					// 	});;
+
+					// }
+
+				//},
+				//afterLoad__Done
+
+			        onLeave: function(index, nextIndex, direction){
+			            var leavingSection = $(this);
+
+			            //after leaving section 2
+			            if(index == 1 && direction =='down'){
+			                animate.unveil();
+			            }
+
+			        }
+			});
+		});
+	</script>
+
+	<style>
+		#menu{
+			display: none;
+		}
+	</style>
+
+</head>
+<body>
+
+
+
+<ul id="menu">
+	<li data-menuanchor="Page1"><a href="#Page1">1 slide</a></li>
+	<li data-menuanchor="Page2"><a href="#Page2">2 slide</a></li>
+	<li data-menuanchor="Page3"><a href="#Page3">3 slide</a></li>
+	<li data-menuanchor="Page4"><a href="#Page4">4 slide</a></li>
+	<li data-menuanchor="Page5"><a href="#Page5">5 slide</a></li>
+	<li data-menuanchor="Page6"><a href="#Page6">6 slide</a></li>
+	<li data-menuanchor="Page7"><a href="#Page7">7 slide</a></li>
+	<li data-menuanchor="Page8"><a href="#Page8">8 slide</a></li>
+</ul>
+
+<div id = "glitchBoxContainer"></div>
+
+<div id="fullpage">
+
+	<div class="section" id="section1">
+
+		<div id="mainTitle">
+			<br/>
+			<img id="titleImg" src = "img/titleImg.png" />
+			<br/>
+			<div id="creatorList">
+				MARC ABBEY • DAVID CIHELNA • RUBIN HUANG • YURIKA MULASE
+			</div>
+		</div>
+
+		<div class = "blubBack" id="blubBackL"><div class="blubFront"></div></div>
+		<div class = "blubBack" id="blubBackR"><div class="blubFront"></div></div>
+
+	</div>
+
+	<div class="section" id="section2">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+	<div class="section" id="section3">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+    <div class="section" id="section4">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+	<div class="section" id="section5">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+	<div class="section" id="section6">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+	<div class="section" id="section7">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+    <div class="section" id="section8">
+	<!--></-->
+	Marc haven't done content yet; ^_^
+	</div>
+
+</div>
+
+
+</body>
+</html>
