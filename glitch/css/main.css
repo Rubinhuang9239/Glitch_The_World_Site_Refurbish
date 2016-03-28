@@ -71,6 +71,8 @@ p{
 }
 .section{
 	text-align:center;
+	color:#FFF;
+	background-color: #000;
 }
 
 .twitter-share-button{
@@ -114,7 +116,7 @@ p{
 }
 
 .blubBack{
-	height: 94%;
+	height: 82%;
 	width: 15%;
 	position: absolute;
 	top:0px;
@@ -170,6 +172,92 @@ transform:rotateZ(180deg);
 	width: 45px;
 	opacity: 0.25;
 	border: solid 1px rgba(255,255,255,0.15);
-	-webkit-transition : all 2.4s ease-out;
+	-webkit-transition : all 2.4s ease-in;
 	/*transform:perspective(1500px) translateX(0px) translateY(0px);*/
 }
+
+#section2{
+	background-size: 108%;
+	background-repeat: no-repeat;
+	text-shadow:0px 0px 5px #000;
+	background-image: url("../img/azraroom.jpg");
+	background-position: center 10% !important;
+}
+
+#section3{
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-shadow:0px 0px 5px #000;
+	background-image: url("../img/hands.jpg");
+	background-position: 50% 100%;
+	-webkit-transition : background 2s ease-in;
+}
+
+.guard{
+
+	position: absolute;
+
+	top:0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: auto;
+
+	width: 75px;
+	height: 60px;
+
+	background-color: rgba(255,255,255,0.55);
+
+	border-radius: 2px;
+	z-index: 999;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	font-size: 6px;
+	color:#5AF;
+	text-shadow:none;
+	border: solid 1.5px rgba(120,215,255,0.3);
+
+	opacity: 0;
+
+}
+
+
+#guard0{
+	background-image: url("../img/lar_head_pink.png");
+	-webkit-transition: all 2s ease-in-out;
+	transform:translateX(-600px);
+}
+
+#guard1{
+	background-image: url("../img/lar_head_yellow.png");
+	-webkit-transition: all 3s ease-in-out;
+	transform:translateX(500px) translateY(-100px);
+}
+
+
+
+.content{
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+	font-size:1.5em; 
+	width: 72%;
+	margin: auto;
+	text-align: left;
+	line-height: 1.4em;
+}
+
+.workVideo{
+		height: 480px;
+		width: 72%;
+		margin: auto;
+		opacity: 0;
+		-webkit-transition: opacity 0.8s ease-in-out;
+		box-shadow:0px 0px 8px #ACF;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+

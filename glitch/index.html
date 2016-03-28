@@ -3,13 +3,13 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>BetterFrame - fullPage.js</title>
-	<meta name="keywords"  content="fullpage,jquery,demo,callbac,function,event" />
+	<title>- Glitch The World -</title>
+	<meta name="keywords"  content="google future story telling, interactive, story telling" />
 	<meta name="Resource-type" content="Document" />
 
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -29,35 +29,55 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#000', '#000', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b', '#4BBFC3', '#7BAABE'],
 				'navigation': true,
 				menu: '#menu',
 				'navigationPosition': 'right',
 				responsive: 700,
-				//afterLoad: function(anchorLink, index){
+				afterLoad: function(anchorLink, index){
+
+					if(index != 1){
+						inSection1 = false;
+					}
+
+					if(index == 1){
+						inSection1 = true;
+					}
 
 					//section 2
-					// if(index == 2){
-					// 	//moving the image
-					// 	$('#section1').find('img').delay(500).animate({
-					// 		left: '0%'
-					// 	}, 1500, 'easeOutExpo');
+					else if(index == 2){
 
-					// 	$('#section1').find('p').first().fadeIn(1800, function(){
-					// 		$('#section1').find('p').last().fadeIn(1800);
-					// 	});;
+						//Prepare Video
+						var video = document.getElementById("DocVideo");
+						video.src = "https://player.vimeo.com/video/129504331";
 
-					// }
+						//Initial guad LAR
+						animate.cruseReady = true;
+						$(".guard").css({"opacity":"1"});
+						animate.startCruse();
+					}
 
-				//},
+					else if(index == 3){
+
+						//Lunch Video
+						var videoBox = document.getElementsByClassName("workVideo");
+						videoBox[0].style.opacity = "1";
+						var section3 = document.getElementById("section3");
+						section3.style.backgroundPosition = "50% 90%";
+
+					}
+
+				},
 				//afterLoad__Done
 
 			        onLeave: function(index, nextIndex, direction){
 			            var leavingSection = $(this);
 
 			            //after leaving section 2
-			            if(index == 1 && direction =='down'){
-			                animate.unveil();
+			            if(index == 2){
+			                animate.stopCruse();
+			                if(direction =='down'){
+			                	animate.unveil();
+			            	}
 			            }
 
 			        }
@@ -108,38 +128,50 @@
 	</div>
 
 	<div class="section" id="section2">
-	<!--></-->
-	Marc haven't done content yet; ^_^
+		<p class = "content"  style = "padding-top:36%">
+		Glitch the World is a live interactive storytelling experience about a young girl
+		trying to break out of a digital world, losing her sense of reality along the way.
+		</p>
+
+		<div class = "guard" id = "guard0" >SECURITY SCAN...</div>
+		<div class = "guard" id = "guard1" >SECURITY SCAN...</div>
+
 	</div>
 
 	<div class="section" id="section3">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+		<div class = "workVideo">
+			<iframe id="DocVideo" frameborder="0" allowfullscreen="no" scrolling="no" src="" height="100%" width="100%">
+			</iframe>
+		</div>
 	</div>
 
     <div class="section" id="section4">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+		<p class = "content" >
+		One of our goals with this project was to find an experience that would bridge gaming, interactive media, and film and create a novel, accessible way to participate in our narrative. 
+		</p>
+
 	</div>
 
 	<div class="section" id="section5">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+	Marcs haven't done content yet; ^_^
 	</div>
 
 	<div class="section" id="section6">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+	Marcs haven't done content yet; ^_^
 	</div>
 
 	<div class="section" id="section7">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+	Marcs haven't done content yet; ^_^
 	</div>
 
     <div class="section" id="section8">
 	<!--></-->
-	Marc haven't done content yet; ^_^
+	Marcs haven't done content yet; ^_^
 	</div>
 
 </div>

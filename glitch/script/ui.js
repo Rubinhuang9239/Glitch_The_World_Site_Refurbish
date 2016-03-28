@@ -36,9 +36,9 @@ ui.initGlitchBoxes = function(amount){
 									  "px) translateY(" + (currentBoxPos.y + containerHeight) + "px) translateZ("
 									  +  currentBoxPos.z + "px) rotateX(" + currentBoxPos.z + "deg) rotateY(" + currentBoxPos.z + "deg)";
 
-		currentBox.style.backgroundColor = "rgba(" + Math.round(random(120, 220)) + "," 
+		currentBox.style.backgroundColor = "rgba(" + Math.round(random(70, 160)) + "," 
 													+ Math.round(random(120, 220)) + "," 
-													 + Math.round(random(120, 220)) + ",0.75)";
+													 + Math.round(random(185, 255)) + ",0.75)";
 
 	}
 }

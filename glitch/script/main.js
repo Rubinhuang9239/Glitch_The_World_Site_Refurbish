@@ -7,6 +7,7 @@ var blubFronts = null;
 var currentOpacity = 0;
 var intervalTime = null;
 var glitchSwitch = false;
+var inSection1 = true;
 
 
 function preload() {
@@ -51,6 +52,8 @@ function randomTime(){
 }
 
 function draw(){
+
+if(inSection1){
 
   if(glitchSwitch === true){
 
@@ -121,6 +124,8 @@ function draw(){
     rect( i10 , halfH, 10, height );
     rect( width - i10 , halfH, 10, height );
   }
+
+}
 
 }
 
